@@ -6,18 +6,31 @@ Clima y MySQL
 Instrucciones para la creacion de la base de datos correspondiente a este ejercicio
 
 1.Instalar MySQL Server
+
 `sudo apt install mysql-server`
+
 2. Entrar a MySQL
+
+3. Tablas y usuarios
+
 `sudo mysql`
-CREATE DATABASE codigoIoT;
-USE codigoIoT;
-CREATE TABLE clima (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR (248) NOT NULL, temperatura FLOAT (4,2), humedad INT (3));
-DESCRIBE clima;
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY '12345';
-CREATE USER 'valerie'@'localhost' IDENTIFIED BY '12345';
-GRANT ALL PRIVILEGES ON *.* TO 'valerie'@'localhost';
-node-red-node-mysql
--------------
+
+`CREATE DATABASE codigoIoT;`
+
+`USE codigoIoT;`
+
+`CREATE TABLE clima (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR (248) NOT NULL, temperatura FLOAT (4,2), humedad INT (3));`
+
+`DESCRIBE clima;`
+
+`CREATE USER 'newuser'@'localhost' IDENTIFIED BY '12345';`
+
+`CREATE USER 'valerie'@'localhost' IDENTIFIED BY '12345';`
+
+`GRANT ALL PRIVILEGES ON *.* TO 'valerie'@'localhost';`
+
+`node-red-node-mysql`
+
 
 Installar Grafana
 https://grafana.com/grafana/download
